@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ResumeLens</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <img src="{{ url_for ('static', filename = 'assets/A1.png') }}" alt="Preloader Image" class="preloader-image">
+    </div>
+
+    <!-- Content Container -->
+    <div id="content-container" style="display: none;">
+      <div class="grid_container">
+        <!-- Header -->
+        <div class="item" id="item1">
+          <h1 class="char">
+            <span style="--char-index: 1;">R</span><span style="--char-index: 2;">e</span><span style="--char-index: 3;">s</span><span style="--char-index: 4;">u</span><span style="--char-index: 5;">m</span><span style="--char-index: 6;">e</span>
+            <span style="--char-index: 7;">L</span><span style="--char-index: 8;">e</span><span style="--char-index: 9;">n</span><span style="--char-index: 10;">s</span>
+          </h1>
+          <nav>
+            <a href="{{ url_for('index') }}">PLAYGROUND</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+          </nav>
+        </div>
+
+        <!-- Main heading -->
+        <div class="item" id="item2">
+          <img class="zoom_img" src="{{ url_for ('static', filename = 'assets/B.png') }}" alt="Image not found" />
+          <h2 class="typewriter">
+            Ready to simplify <br>your hiring process? <br>GET IN TOUCH
+          </h2>
+        </div>
+
+        <!-- Image -->
+        <div class="item" id="item3">
+          <img src="{{ url_for ('static', filename = 'assets/main2.jpg') }} " alt="Artist Portrait" />
+        </div>
+
+        <!-- Features/Projects list -->
+        <div class="item" id="item4">
+          <h3>Features</h3>
+          <br><hr><br>
+          <ul>
+            <li>Transforming recruitment through AI-driven insights.</li>
+            <hr><br>
+            <li>Enhances the hiring process with precise, contextual analysis.</li>
+            <hr><br>
+            <li>Optimized candidate matching for top companies.</li>
+            <hr><br>
+          </ul>
+        </div>
+
+        <!-- Description -->
+        <div class="item" id="item5">
+          <img src= "{{ url_for ('static', filename = 'assets/A.png') }} " alt="" />
+          <p>
+            An AI-powered resume analysis tool using BERT, SpaCy, and machine learning to extract key candidate information and match profiles to job roles.
+          </p>
+        </div>
+
+        <!-- Contact block -->
+        <div class="item" id="item6">
+          <div class="contact-wrapper">
+            <h3>Contact Me</h3>
+            <a href="#"><i class="fas fa-link"></i></a>
+          </div>
+          <p>Have some questions?</p>
+        </div>
+
+        <!-- Social media Handle -->
+        <div class="item" id="item7">
+          <div class="social-icon">
+            <a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+          </div>
+          <div class="social-icon">
+            <a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+          </div>
+          <div class="social-icon">
+            <a href="#"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src = "/static/scripts.js"></script>
+    
+
+  </body>
+</html>
